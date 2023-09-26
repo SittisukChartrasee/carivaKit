@@ -39,7 +39,7 @@ do
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/web-library-template.git
     elif [[ "${listItems[2]}" == "$itemSelected" ]]; then
       echo "3"
-      # npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
+      npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
     elif [[ "${listItems[3]}" == "$itemSelected" ]]; then
       echo "4"
       # todo : create a new project template library
