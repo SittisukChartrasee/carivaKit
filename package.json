@@ -1,0 +1,11 @@
+{
+  "name": "cariva",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "cariva": "bin/run.sh"
+  }
+}
