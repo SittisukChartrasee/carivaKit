@@ -1,3 +1,3 @@
 # Using
 
-npx github:SittisukChartrasee/cariva
+npx github:SittisukChartrasee/carivaKit
