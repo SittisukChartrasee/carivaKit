@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "bin/run.sh",
-  "scripts": {
-    "cariva": "npx cariva"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
