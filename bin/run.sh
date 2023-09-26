@@ -45,14 +45,14 @@ do
     echo " "
 
     if [[ "${listItems[0]}" == "$itemSelected" ]]; then
-      npx github:piuccio/cowsay "" -f awesome-face
+      npx github:piuccio/cowsay "" -f dragon
       # todo : create a new project template stucture web
     elif [[ "${listItems[1]}" == "$itemSelected" ]]; then
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/web-library-template.git
     elif [[ "${listItems[2]}" == "$itemSelected" ]]; then
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
     elif [[ "${listItems[3]}" == "$itemSelected" ]]; then
-      npx github:piuccio/cowsay "" -f awesome-face
+      npx github:piuccio/cowsay "" -f ghost
       # todo : create a new project template library
     fi
     break
