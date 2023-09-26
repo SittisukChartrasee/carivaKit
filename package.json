@@ -2,6 +2,7 @@
   "name": "cariva",
   "version": "1.0.0",
   "description": "",
+  "main": "bin/run.sh",
   "keywords": [],
   "author": "",
   "license": "ISC",
