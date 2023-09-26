@@ -39,22 +39,20 @@ do
       break
     fi
 
-    npx github:piuccio/cowsay "" -f awesome-face
+    
     echo " "
     echo "**************$Green $itemSelected item selected.$ResetColor **************"
     echo " "
 
     if [[ "${listItems[0]}" == "$itemSelected" ]]; then
+      npx github:piuccio/cowsay "" -f awesome-face
       # todo : create a new project template stucture web
-      echo "1"
     elif [[ "${listItems[1]}" == "$itemSelected" ]]; then
-      echo "2"
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/web-library-template.git
     elif [[ "${listItems[2]}" == "$itemSelected" ]]; then
-      echo "3"
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
     elif [[ "${listItems[3]}" == "$itemSelected" ]]; then
-      echo "4"
+      npx github:piuccio/cowsay "" -f awesome-face
       # todo : create a new project template library
     fi
     break
