@@ -27,19 +27,18 @@ do
     fi
 
     npx github:piuccio/cowsay "" -f awesome-face
+    echo "**************$Green $itemSelected item selected.$ResetColor **************"
 
 
     echo " "
     if [[ $listItems[0] == ${itemSelected} ]]; then
-      echo "**************$Green $itemSelected item selected.$ResetColor **************"
+      # todo : create a new project template stucture web
     elif [[ $listItems[1] == ${itemSelected} ]]; then
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/web-library-template.git
-      echo "**************$Green $itemSelected item selected.$ResetColor **************"
     elif [[ $listItems[2] ]]; then
-      npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
-      echo "**************$Green $itemSelected item selected.$ResetColor **************"
+      # npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
     elif [[ $listItems[3] ]]; then
-      echo "**************$Green $itemSelected item selected.$ResetColor **************"
+      # todo : create a new project template library
     fi
     echo " "
     break
