@@ -33,12 +33,15 @@ do
     echo " "
     if [[ $listItems[0] == ${itemSelected} ]]; then
       # todo : create a new project template stucture web
+      continue
     elif [[ $listItems[1] == ${itemSelected} ]]; then
       npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/web-library-template.git
     elif [[ $listItems[2] ]]; then
       # npx react-native init $projectName --template https://gitlab.com/cloud_arv/health-tech/building-blocks/templates/mobile-structure-template.git
+      continue
     elif [[ $listItems[3] ]]; then
       # todo : create a new project template library
+      continue
     fi
     echo " "
     break
