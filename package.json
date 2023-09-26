@@ -8,5 +8,9 @@
   "license": "ISC",
   "bin": {
     "cariva": "bin/run.sh"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "yargs": "^17.7.2"
   }
 }
