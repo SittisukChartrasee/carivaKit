@@ -1,6 +1,34 @@
-#!/usr/bin/env bash
-source $PWD/bin/carivaLogo.sh
-source $PWD/bin/helper.sh
+ResetColor=$(echo -e '\033[0m')       # endColor
+Red=$(echo -e '\033[31m')             # Red
+Green=$(echo -e '\033[1;32m')         # Green
+IYellow=$(echo -e '\033[1;33m')       # Yellow
+
+listItems=(
+  "templateStuctureWeb"
+  "templateLibraryWeb(available)"
+  "templateStuctureMobile(available)"
+  "templateLibraryMobile"
+)
+
+logo="
+    
+    . * .     * *   
+    * * *   * * * *
+    . * .   * * * *             * * * *          * *        * * * * *    * *  * *         * *    * *
+            * * * *           * . * * * *       * . *       * * * * . *  * *   * *       * *    * . *
+      * * * * . . . . .      * *       *       * * * *      * *     * *  * *    * *     * *    * * * * 
+    * * * * . * * * . . .    * *              * *   * *     * ****** *   * *     * *   * *    * *   * *
+    * * * * . * * * . . .    * *       *     * *     * *    * *** * *    * *      * * * *    * *     * *
+      * * * . * * * . .       * . * * * *   * *       * *   * *   * *    * *       * . *    * *       * *
+            . . . .             * * * *    * *         * *  * *     * *  * *        * *    * *         * *
+            . . . .
+              . . 
+
+                                   ... $Green Welcome to CARIVA Template$ResetColor ...
+"
+
+echo "$logo"
+PS3="Please choose a templates: "
 
 select itemSelected in ${listItems[@]}
 do
@@ -27,7 +55,7 @@ do
     # - - - - - - - - - - - - - - - #
     # Call to create a new project  #
     # - - - - - - - - - - - - - - - #
-    
+
     if [[ "${listItems[0]}" == "$itemSelected" ]]; then
       npx github:piuccio/cowsay "" -f dragon
       # todo : create a new project template stucture web
