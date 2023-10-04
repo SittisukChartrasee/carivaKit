@@ -1,7 +1,7 @@
-ResetColor=$(echo -e '\033[0m')       # endColor
-Red=$(echo -e '\033[31m')             # Red
-Green=$(echo -e '\033[1;32m')         # Green
-IYellow=$(echo -e '\033[1;33m')       # Yellow
+ResetColor=$(echo '\033[0m')       # endColor
+Red=$(echo '\033[31m')             # Red
+Green=$(echo '\033[1;32m')         # Green
+IYellow=$(echo '\033[1;33m')       # Yellow
 
 listItems=(
   "templateStuctureWeb"
@@ -24,7 +24,7 @@ logo="
             . . . .
               . . 
 
-                                   ... $Green Welcome to CARIVA Template$ResetColor ...
+                                       ...$Green Welcome to CARIVA Template$ResetColor ...
 "
 
 echo "$logo"
