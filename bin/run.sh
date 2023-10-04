@@ -1,49 +1,33 @@
-ResetColor='\033[0m'       # Text Reset
-Red='\033[0;31m'          # Red
-Green='\033[0;32m'        # Green
-IYellow='\033[0;93m'      # Yellow
-
-listItems=(
-  "templateStuctureWeb"
-  "templateLibraryWeb(available)"
-  "templateStuctureMobile(available)"
-  "templateLibraryMobile"
-)
-
-echo "
-      ####            ####   # # # # #         ######  ##                 #   ####       ##        ##    ######  ################
-    ##    ##         ##   #  ##        ##        ##     ##               #   ##   #      ##      ##        ##           ##
-  ##        #       ##    #  ##          ##      ##      ##             #   ##    #      ##    ##          ##           ##
-  ##               ##     #  ##          ##      ##       ##           #   ##     #      ##  ##            ##           ##
-  ##              ##      #  ##         #        ##        ##         #   ##      #      ####              ##           ##
-  ##             ## # # # #  ## # # # #          ##         ##       #   ## # # # #      ##  ##            ##           ##
-  ##            ##        #  ##       ##         ##          ##     #   ##        #      ##    ##          ##           ##
-  ##        #  ##         #  ##         #        ##           ##   #   ##         #      ##      ##        ##           ##
-    ##    ##  ##          #  ##          ##      ##            ## #   ##          #      ##        ##      ##           ##
-      ####   ##           #  ##           ###  ######           ##   ##           #      ##         ###  ######         ##
-"
-
-PS3="Please select a templates: "
+#!/usr/bin/env bash
+source $PWD/bin/carivaLogo.sh
+source $PWD/bin/helper.sh
 
 select itemSelected in ${listItems[@]}
 do
+    # Validate item selected
     if [[ ! "${listItems[@]}" =~ "$itemSelected" ]]; then
         echo "$Red error$ResetColor$IYellow is not a valid option. Please select a valid option.$ResetColor"
         break
     fi
 
+    # Input project name
     read -p "Project name: " projectName
 
+    # Validate project name
     if [[ "$projectName" =~ [^a-zA-Z0-9] ]]; then
       echo "$Red error$ResetColor \"$projectName\"$IYellow is not a valid name for a project. Please use a valid identifier name (alphanumeric).$ResetColor"
       break
     fi
-
     
+    # Display selected item
     echo " "
-    echo "$Green\xE2\x9C\x94$ResetColor Selected $itemSelected"
+    echo "$Green ✔$ResetColor Selected $itemSelected"
     echo " "
 
+    # - - - - - - - - - - - - - - - #
+    # Call to create a new project  #
+    # - - - - - - - - - - - - - - - #
+    
     if [[ "${listItems[0]}" == "$itemSelected" ]]; then
       npx github:piuccio/cowsay "" -f dragon
       # todo : create a new project template stucture web
