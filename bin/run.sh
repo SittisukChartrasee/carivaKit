@@ -41,7 +41,7 @@ do
 
     
     echo " "
-    echo "**************$Green $itemSelected item selected.$ResetColor **************"
+    echo "$Green\xE2\x9C\x94$ResetColor Selected $itemSelected"
     echo " "
 
     if [[ "${listItems[0]}" == "$itemSelected" ]]; then
